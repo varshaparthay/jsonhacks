@@ -1,0 +1,178 @@
+{
+    "task": {
+      "task_id": "632ab3f18156430075973c30",
+      "created_at": "2022-09-21T06:49:21.987Z",
+      "completed_at": "2022-10-01T05:05:02.938Z",
+      "type": "lidarlinking",
+      "status": "completed",
+      "instruction": "<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vQv8TbBDCXl0hCvaJOyCo7Bhyth2od4_TNF1tk5E4cnMbMftdzgoCnj4qBgCjUT0Cjz9FCGaB2Ydp7F/pub?embedded=true\"></iframe>",
+      "params": {
+        "lidar_task": "6324046b26a44e001e9f8f1c",
+        "can_add_annotations": true,
+        "can_edit_annotations": true,
+        "can_delete_annotations": true,
+        "annotation_type": "imageannotation",
+        "annotation_attributes": {
+          "lights_status": {
+            "choices": [
+              "On",
+              "Off",
+              "Unknown"
+            ],
+            "conditions": {
+              "attribute_conditions": [
+                {
+                  "Vehicle attribute": "Emergency Vehicle"
+                }
+              ]
+            },
+            "description": "The lights_status attribute is for Emergency Vehicles only. It is used to indicate whether the vehicle's emergency light system is currently on or not."
+          },
+          "occluded": {
+            "choices": [
+              "0%",
+              "1%-20%",
+              "21%-40%",
+              "41%-60%",
+              "61%-80%"
+            ],
+            "description": "Occlusion is defined as the percentage of each object that is hidden behind other objects."
+          },
+          "parked": {
+            "choices": [
+              "Yes",
+              "No",
+              "Unknown"
+            ],
+            "conditions": {
+              "label_condition": {
+                "label": [
+                  "Vehicle"
+                ]
+              }
+            },
+            "description": "Is the vehicle currently parked?"
+          },
+          "parked_cyc": {
+            "choices": [
+              "Parked",
+              "Ridden",
+              "Racked",
+              "Walked",
+              "Unknown"
+            ],
+            "conditions": {
+              "label_condition": {
+                "label": [
+                  "Bicycle"
+                ]
+              }
+            },
+            "description": "Select attributes for each cycle/motorcycle's parking status."
+          },
+          "truncated": {
+            "choices": [
+              "0%",
+              "1%-20%",
+              "21%-40%",
+              "41%-60%",
+              "61%-80%"
+            ],
+            "description": "Truncation is defined as the percentage of each object that is cut off by the edge of the image frame."
+          }
+        },
+        "labeling_sample_rate": 1,
+        "objects_to_annotate": [
+          "Vehicle",
+          "Bicycle",
+          "Pedestrian",
+          "Animal",
+          "No Label Zone"
+        ],
+        "task_definitions": [],
+        "skip_labels": [],
+        "default_geometry": "box",
+        "geometries": {
+          "box": {
+            "min_height": 0,
+            "min_width": 0,
+            "objects_to_annotate": [
+              {
+                "choice": "Vehicle",
+                "subchoices": [
+                  "Car",
+                  "Bus",
+                  "Truck",
+                  "Motorcycle",
+                  "Emergency Vehicle",
+                  "Other Vehicle"
+                ]
+              },
+              "Bicycle",
+              "Pedestrian",
+              "Animal",
+              "DontCare",
+              "Vehicle",
+              "No Label Zone"
+            ],
+            "examples": []
+          }
+        }
+      },
+      "is_test": false,
+      "urgency": "standard",
+      "metadata": {
+        "batch": "2022-09-16T05:03:56.255680-278",
+        "custom_tags": [
+          "dual_return"
+        ],
+        "project": "panda_single_frame_dependent_2d",
+        "s3_prefix": "2022-09-16T05:03:56.255680-278",
+        "scene": "host-p205-lidar2-1347128179174241568-1347128179574363016"
+      },
+      "processed_attachments": [],
+      "project": "panda_single_frame_dependent_2d",
+      "priority": 0,
+      "postProcessingResults": {},
+      "customer_review_status": "accepted",
+      "customer_review_comments": [
+        ""
+      ],
+      "prior_responses": [],
+      "callback_url": "https://avperceptionlabelprocessorservice.pdx.l5.woven-planet.tech/api/v1/scale-task-callback",
+      "callback_completed": true,
+      "response": {
+        "annotations": {
+          "url": "https://s3.labeling-data.net/scale-cds-public-us-west-2/5c7633ec64c093003791762f/Lmg9oLzPEmNiie7?Expires=1728000000&Key-Pair-Id=K3DN68TU3V3L3W&Signature=te3cgOth95DYldY-mcVF6ogOLro2YuJj5vJfqfEMLedv2rbUepdwXEagX0BYFvfHd4hM4XFluul4r8q2D8TpAzZUoNtH%7EDIZivppnLfXWZsJJef2ZJemEjcAXYkvrsoHXRT9Ti%7ESLJ8-0nZ1Yy%7E7b4nj9pyBPPA5grsaJIbiSNWpW9kJZoAXfU0adHxeO7gfLW1EmsdFe6UgQtkV6EpwqDVSDSX%7EsmsvISgkwwN4YUEmGLEahKeKcZxqqia0%7Eg32WN2WDirpC4WCIbpGoKeCXRzOvcmlIZMssvFDHYKekmvQAPZOcq6gktzEWhWYNJ8-7A1BGsjbOnYckSGx1skPVw__"
+        },
+        "is_customer_fix": false
+      },
+      "unique_id": "6324046b26a44e001e9f8f1c_dependent_0",
+      "project_param_version": 0,
+      "customer_reviewed_by": "lenny.pak@woven-planet.global",
+      "customer_audit_time_secs": 114.874,
+      "customer_audit_active_time_secs": 114.874,
+      "customer_audited_at": "2022-10-04T16:02:16.550Z",
+      "audits": [
+        {
+          "audited_by": "lenny.pak@woven-planet.global",
+          "audited_at": "2022-10-04T16:02:16.550Z",
+          "audit_time_secs": 114.874,
+          "audit_active_time_secs": 114.874,
+          "audit_result": "accepted",
+          "audit_source": "customer"
+        }
+      ],
+      "projectId": "62c4b3cc55f8ce00314984e2",
+      "updated_at": "2022-10-04T16:40:45.784Z",
+      "work_started": true,
+      "isProcessed": false
+    },
+    "response": {
+      "annotations": {
+        "url": "https://s3.labeling-data.net/scale-cds-public-us-west-2/5c7633ec64c093003791762f/Lmg9oLzPEmNiie7?Expires=1728000000&Key-Pair-Id=K3DN68TU3V3L3W&Signature=te3cgOth95DYldY-mcVF6ogOLro2YuJj5vJfqfEMLedv2rbUepdwXEagX0BYFvfHd4hM4XFluul4r8q2D8TpAzZUoNtH%7EDIZivppnLfXWZsJJef2ZJemEjcAXYkvrsoHXRT9Ti%7ESLJ8-0nZ1Yy%7E7b4nj9pyBPPA5grsaJIbiSNWpW9kJZoAXfU0adHxeO7gfLW1EmsdFe6UgQtkV6EpwqDVSDSX%7EsmsvISgkwwN4YUEmGLEahKeKcZxqqia0%7Eg32WN2WDirpC4WCIbpGoKeCXRzOvcmlIZMssvFDHYKekmvQAPZOcq6gktzEWhWYNJ8-7A1BGsjbOnYckSGx1skPVw__"
+      },
+      "is_customer_fix": false
+    },
+    "task_id": "632ab3f18156430075973c30"
+  }
